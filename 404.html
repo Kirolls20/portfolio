@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecting...</title>
+  <script>
+    // Redirect to index.html for GitHub Pages SPA support
+    var path = window.location.pathname;
+    var segments = path.split('/').filter(Boolean);
+    
+    // If we're in the portfolio subdirectory, redirect to index.html
+    if (segments[0] === 'portfolio') {
+      window.location.replace('/portfolio/index.html' + window.location.search + window.location.hash);
+    } else {
+      window.location.replace('/index.html' + window.location.search + window.location.hash);
+    }
+  </script>
+</head>
+<body>
+  <p>Redirecting...</p>
+</body>
+</html>
+
